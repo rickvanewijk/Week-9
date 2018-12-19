@@ -1,0 +1,57 @@
+* {
+    border: 1px solid #fdfdfd;
+}
+html { 
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 150px auto 1fr;
+    background-color: whitesmoke;
+    grid-template-areas:
+    "header" "header" "header"
+    "main"
+    "footer" "footer" "footer"
+}
+
+.header {
+    grid-area: header;
+    display: flex;
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+    grid-template-areas: 
+    "hero" "top-stories" "featured" "special-edition" "most-recent" "highlight"
+}
+
+.block {
+    display: flex;
+}
+
+.hero {
+    grid-area: hero;
+}
+
+.top-stories {
+    grid-area: top-stories;
+}
+
+.featured {
+    grid-area: featured;
+}
+
+.special-edition {
+    grid-area: special-edition;
+}
+
+.most-recent {
+    grid-area: most-recent;
+}
+
+.highlight {
+    grid-area: highlight;
+}
