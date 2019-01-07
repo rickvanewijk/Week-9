@@ -156,3 +156,26 @@ body {
     align-self: center;
     justify-self: center;
 }
+
+@media screen and (min-width: 50em) {
+    body { grid-template-rows: 4rem 1fr auto; }
+    
+    .main {
+      grid-template-columns: 
+        minmax(16rem, 1fr) 1fr 1fr minmax(16rem, 1fr);
+      grid-template-rows: 
+        auto auto minmax(18rem, auto) auto;
+      grid-template-areas:
+        "hero hero hero highlight"
+        "hero hero hero featured"
+        "top-stories special-edition special-edition featured"
+        "top-stories most-recent most-recent most-recent";
+    }
+    .header {
+      flex-direction: row;
+      height: 4rem;
+    }
+    .site-title {
+      flex: 1 1 auto;
+    }
+  }
